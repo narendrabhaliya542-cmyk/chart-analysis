@@ -1,13 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>MSDE Analysis - Live Chart</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { width: 100%; height: 100%; overflow: hidden; background: #131722; font-family: sans-serif; }
+    header { background: #1e222d; color: #d1d4dc; padding: 10px 16px; border-bottom: 1px solid #2a2e39; }
+    h1 { font-size: 16px; font-weight: 600; }
+    p { font-size: 12px; color: #787b86; }
+    #chart-container { width: 100%; height: calc(100vh - 45px); }
+  </style>
+</head>
 <body>
   <header>
-    <h1>Chart Analysis</h1>
-    <p>Advanced Market Research & Technical Analysis</p>
+    <h1>MSDE Analysis</h1>
+    <p>Market Structure . Direction . Entry</p>
   </header>
 
-  <div class ="box">
-    <h2>MSDE Anslysis</h2>
-    <p>Market . Structure . Direction . Entry</p>
-    <p>Our goal is to understand market behaviour through systematic analysis.</p>
-  </div>
+  <div id="chart_container"></div>
+
+  <script src="https://s3.tradingview.com/tv.js"></sript>
+  <script>
+    new TradingView.widget({
+      "autosize": true,
+      "symbol": "NSE:NIFTY",
+      "interval": "5",
+      "timezone": "Asia/Kolkata",
+      "theme": "dark",
+      "style": "1",
+      "locale": "en",
+      "toolbar_bg": "#1e222d",
+      "enable_publishing": false,
+      "allow_symbol-change": true,
+      "container_id": "chart_container"
+    });
+  </script>
 </body>
 </html>
+
+    
