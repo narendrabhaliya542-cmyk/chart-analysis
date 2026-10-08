@@ -19,11 +19,11 @@
     <p>Market Structure . Direction . Entry</p>
   </header>
 
-  <div id="chart_container"></div>
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
 
-  <script src="https://s3.tradingview.com/tv.js"></sript>
-  <script>
-    new TradingView.widget({
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
       "autosize": true,
       "symbol": "NSE:NIFTY",
       "interval": "5",
@@ -31,12 +31,10 @@
       "theme": "dark",
       "style": "1",
       "locale": "en",
-      "toolbar_bg": "#1e222d",
-      "enable_publishing": false,
-      "allow_symbol-change": true,
-      "container_id": "chart_container"
-    });
+      "allow_symbol_change": true
+    }
   </script>
+  </div>
 </body>
 </html>
 
